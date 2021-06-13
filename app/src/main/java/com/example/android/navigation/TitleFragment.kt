@@ -22,16 +22,12 @@ class TitleFragment : Fragment() {
                 false
             )
         // Navigation can create the onClickListener
-        binding.playButton.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment)
-        )
-        /** Secondary way of navigating
-         * { view ->
-        Navigation.findNavController(view).navigate(R.id.action_titleFragment_to_gameFragment)
+        binding.playButton.setOnClickListener { view ->
+            view.findNavController()
+                .navigate(TitleFragmentDirections.actionTitleFragmentToGameFragment())
         }
-         */
 
-        setHasOptionsMenu(true)
+        setHasOptionsMenu(true) // Display overflow menu
 
         return binding.root
     }
