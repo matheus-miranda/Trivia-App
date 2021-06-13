@@ -22,13 +22,13 @@ class TitleFragment : Fragment() {
                 false
             )
         // Navigation can create the onClickListener
-        binding.playButton.setOnClickListener (
+        binding.playButton.setOnClickListener(
             Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment)
-                )
+        )
         /** Secondary way of navigating
          * { view ->
-            Navigation.findNavController(view).navigate(R.id.action_titleFragment_to_gameFragment)
-           }
+        Navigation.findNavController(view).navigate(R.id.action_titleFragment_to_gameFragment)
+        }
          */
 
         return binding.root
